@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Monoton&family=Text+Me+One&display=swap");
+
+.cardProducto {
+  width: 18rem;
+  margin:4px;
+  background-color: #147d8b;
+}
+
+.cardProductos {
+  margin:4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardBody {
+  background-color: white;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+img {
+  margin-top: 3px;
+  height: 15rem;
+}
+
+.itemDetail {
+  max-width: 760px;
+  margin-top: 20px;
+}
+.brand{
+  font-family: 'Luxurious Roman', cursive;
+  font-size: 3rem;
+  border-style: none;
+  color: #147d8b;
+}
+.nav-brand{
+  list-style: none;
+}
+.container-fluid{
+  display: grid;
+  justify-items: baseline;
+}
+.contForm{
+  margin-top: 20px;
+}

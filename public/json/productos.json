@@ -1,0 +1,174 @@
+[
+    {
+        "id": 1,
+        "idCategoria": 1,
+        "categoria": "Calderos",
+        "nombre": "Caldero",
+        "marca": "LM",
+        "precio": 6000,
+        "stock": 10,
+        "img": "caldero.jpeg"
+    },
+    {
+        "id": 2,
+        "idCategoria": 1,
+        "categoria": "Calderos",
+        "nombre": "Caldero Fases",
+        "marca": "LM",
+        "precio": 6500,
+        "stock": 15,
+        "img": "calderofases.jpeg"
+    },
+    {
+        "id": 3,
+        "idCategoria": 1,
+        "categoria": "Calderos",
+        "nombre": "Caldero Lavanda",
+        "marca": "LM",
+        "precio": 7700,
+        "stock": 10,
+        "img": "calderolav.jpeg"
+    },
+    {
+        "id": 4,
+        "idCategoria": 1,
+        "categoria": "Calderos",
+        "nombre": "Caldero Moon",
+        "marca": "LM",
+        "precio": 5700,
+        "stock": 15,
+        "img": "calderolunas.jpeg"
+    },
+    {
+        "id": 5,
+        "idCategoria": 1,
+        "categoria": "Calderos",
+        "nombre": "Caldero Snake",
+        "marca": "LM",
+        "precio": 7700,
+        "stock": 9,
+        "img": "calderoser.jpeg"
+    },
+    {
+        "id": 6,
+        "idCategoria": 2,
+        "categoria": "Grimorios",
+        "nombre": "Grimorio Darkside",
+        "marca": "LM",
+        "precio": 11600,
+        "stock": 10,
+        "img": "grimoriodark.jpeg"
+    },
+    {
+        "id": 7,
+        "idCategoria": 2,
+        "categoria": "Grimorios",
+        "nombre": "Grimorio Eye",
+        "marca": "LM",
+        "precio": 12000,
+        "stock": 15,
+        "img": "grimorioeye.jpeg"
+    },
+    {
+        "id": 8,
+        "idCategoria": 2,
+        "categoria": "Grimorios",
+        "nombre": "Grimorio Moon",
+        "marca": "LM",
+        "precio": 12700,
+        "stock": 12,
+        "img": "grimoriomoon.jpeg"
+    },
+    {
+        "id": 9,
+        "idCategoria": 2,
+        "categoria": "Grimorios",
+        "nombre": "Grimorio Sun",
+        "marca": "LM",
+        "precio": 12700,
+        "stock": 11,
+        "img": "grimoriosun.jpeg"
+    },
+    {
+        "id": 10,
+        "idCategoria": 2,
+        "categoria": "Grimorios",
+        "nombre": "Grimorio Time",
+        "marca": "LM",
+        "precio": 13500,
+        "stock": 13,
+        "img": "grimoriotime.jpeg"
+    },
+    {
+        "id": 11,
+        "idCategoria": 3,
+        "categoria": "Objetos",
+        "nombre": "Felix Felicis",
+        "marca": "Dream of Shadows",
+        "precio": 5500,
+        "stock": 22,
+        "img": "felixfelicis.jpeg"
+    },
+    {
+        "id": 12,
+        "idCategoria": 3,
+        "categoria": "Objetos",
+        "nombre": "Dragon Negglace",
+        "marca": "Dream of Shadows",
+        "precio": 6700,
+        "stock": 16,
+        "img": "huevodragon.jpeg"
+    },
+    {
+        "id": 13,
+        "idCategoria": 3,
+        "categoria": "Objetos",
+        "nombre": "Cristal Prophecy lamp",
+        "marca": "Dream of Shadows",
+        "precio": 15000,
+        "stock": 9,
+        "img": "prophecy.jpeg"
+    },
+    {
+        "id": 14,
+        "idCategoria": 3,
+        "categoria": "Objetos",
+        "nombre": "Reliquary Salazar",
+        "marca": "Dream of Shadows",
+        "precio": 8900,
+        "stock": 14,
+        "img": "reliquary.jpeg"
+    },
+    {
+        "id": 15,
+        "idCategoria": 3,
+        "categoria": "Objetos",
+        "nombre": "Skele Gro Bottle",
+        "marca": "Dream of Shadows",
+        "precio": 5600,
+        "stock": 12,
+        "img": "skelegro.jpeg"
+    },
+    {
+        "id": 16,
+        "idCategoria": 3,
+        "categoria": "Objetos",
+        "nombre": "Spine Candle",
+        "marca": "Dream of Shadows",
+        "precio": 3900,
+        "stock": 7,
+        "img": "spinecandle.jpeg"
+    },
+    {
+        "id": 17,
+        "idCategoria": 3,
+        "categoria": "Objetos",
+        "nombre": "Time-turner",
+        "marca": "Dream of Shadows",
+        "precio": 7800,
+        "stock": 11,
+        "img": "timeturner.jpeg"
+    }
+    
+
+]
