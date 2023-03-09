@@ -17,6 +17,23 @@
   margin-bottom: 3px;
   text-align: center;
 }
+.cardBodyDark{
+  background-color: rgb(22, 21, 21);
+  margin-top: 3px;
+  text-align: center;
+}
+
+.cartContainer{
+  margin-top: 3%;
+  margin-left: 26,5%;
+}
+
+.cardCart{
+  max-width: 640px;
+}
+.divButtons button {
+  margin: 4px;
+}
 
 img {
   margin-top: 3px;
@@ -26,6 +43,11 @@ img {
 .itemDetail {
   max-width: 760px;
   margin-top: 20px;
+}
+
+.itemDetailBodyDark {
+  background-color: rgb(22, 21, 21);
+  color: whitesmoke;
 }
 .brand{
   font-family: 'Luxurious Roman', cursive;
@@ -42,4 +64,8 @@ img {
 }
 .contForm{
   margin-top: 20px;
+}
+.darkMode{
+  background-color: black;
+  color: gainsboro;
 }

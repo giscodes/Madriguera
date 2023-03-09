@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { ItemCount } from "../ItemCount/ItemCount"
+import { useDarkModeContext } from "../../context/DarkModeContext"
 export const ItemDetail = ({prod}) => {
   const onAdd = (cantidad) =>{//Agregar producto al carrito
 
@@ -7,10 +8,10 @@ export const ItemDetail = ({prod}) => {
   return (
      <div className="row g-0">
         <div className="col-md-4">
-        <img src={`../img/${prod.img}`} className="img-fluid rounded-start" alt="..." />
+        <img src={prod.img} className="img-fluid rounded-start" alt="..." />
     </div>
     <div className="col-md-8">
-        <div className="card-body">
+       <div className={`card-body ${darkMode && "itemDetailBodyDark"}`}>
             <h5 className="card-title">{prod.nombre}</h5>
             <p className="card-text">Modelo: {prod.modelo}</p>
             <p className="card-text">Marca: {prod.marca}</p>

@@ -12,7 +12,7 @@ console.log(data)
 const cliente = Object.fromEntries(data)
 console.log(cliente)
 e.target.reset()
-toast('🦄 Gracias por tu compra!', {
+toast('🦄 Travesura realizada!', {
   position: "top-right",
   autoClose: 5000,
   hideProgressBar: false,

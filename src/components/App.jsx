@@ -13,6 +13,10 @@ export default => importo sin llaves
 */
 //React Router
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//Context
+import { DarkModeProvider } from "../context/DarkModeContext";
+//Firebase
+import { cargarBDD } from "../utils/firebase";
 //Toastify
 import { ToastContainer } from 'react-toastify';
 //Components 
@@ -23,18 +27,21 @@ import { Checkout } from "./Checkout/Checkout";
 import { Cart } from "./Cart/Cart";
 
 export const App = () => {
+  cargarBDD()
   return (
     <>
       <BrowserRouter>
-        <Navbar nombre={"La Madriguera"}/>
+       <DarkModeProvider>
+        <Navbar nombre={"La Madriguera"} />
         <Routes>
-          <Route path='/' element={<ItemListContainer/>}/>
-          <Route path='/category/:idCategoria' element={<ItemListContainer/>}/>
-          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-          <Route path= '/checkout' element={<Checkout/>}/> 
-          <Route path= '/cart' element={<Cart/>}/>
+          <Route path='/' element={<ItemListContainer/>} />
+          <Route path='/category/:idCategoria' element={<ItemListContainer/>} />
+          <Route path='/item/:id' element={<ItemDetailContainer/>} />
+          <Route path= '/checkout' element={<Checkout/>} /> 
+          <Route path= '/cart' element={<Cart/>} />
         </Routes>   
         <ToastContainer/>
+       </DarkModeProvider>
       </BrowserRouter>  
     </>
   )
