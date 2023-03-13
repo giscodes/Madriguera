@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom"
-export const CartWidget = ({cantCarrito}) => {
+import { useCarritoContext } from "../../context/CarritoContext"
+
+export const CartWidget = () => {
+  const { getItemQuantity } = useCarritoContext()
   return (
-      <>
-        <Link className="nav-link" to={"/cart"}><button className="btn btn-dark">Carrito</button></Link>
-        <p>{cantCarrito}</p>
-      </>
+    <>
+      <Link className="nav-link" to={"/cart"}>
+        <button className="btn btn-prod cartWidget">Carrito</button>
+        {getItemQuantity() > 0 && <span className="cantCarrito">{getItemQuantity()}</span>}
+      </Link>
+
+    </>
   )
 }

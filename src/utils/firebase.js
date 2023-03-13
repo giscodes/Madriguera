@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import {getFirestore, collection, addDoc} from "firebase/firestore";
+import {getFirestore, collection, doc, addDoc, getDocs, getDoc, updateDoc, deleteDoc} from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyC6A8beKXBu5-2ZsxvOSy5yCUc3om1V5hw",
   authDomain: "la-madriguera-58cee.firebaseapp.com",
@@ -21,7 +21,7 @@ export const cargarBDD = async () => {
         await addDoc(collection(db, "productos"), { //collection si existe productos, lo consulta sino lo crea y lo consulta
             nombre: prod.nombre,
             marca: prod.marca,
-            categoria: prod.modelo,
+            categoria: prod.categoria,
             idCategoria: prod.idCategoria,
             stock: prod.stock,
             precio: prod.precio,
@@ -29,4 +29,45 @@ export const cargarBDD = async () => {
         })
     })
 
+}
+
+
+export const getProductos= async () =>{
+    const productos = await getDocs(collection(db, "productos"))
+    const items = productos.docs.map(prod =>{
+        return {...prod.data(), id: prod.id}
+    })
+    return items
+}
+
+export const getProducto = async (id) =>{
+    const producto = await getDoc(doc(db, "productos", id))
+    const item = {...producto.data(), id: producto.id}
+    return item
+
+}
+export const updateProducto = async (id, info) => {
+    await updateDoc(doc(db, "productos", id), info)
+}
+export const deleteProducto = async (id) => {
+    await deleteDoc(doc(db, "productos", id))
+}
+
+
+//CREATE AND READ ORDEN DE COMPRA
+
+export const createOrdenCompra = async (cliente, productos, precioTotal, fecha) => {
+    const ordenCompra = await addDoc(collection(db, "ordenesCompra"), {
+        datosCliente: cliente,
+        productos: productos,
+        precioTotal: precioTotal,
+        fecha: fecha
+    })
+    return ordenCompra
+}
+
+export const getOrdenCompra = async (id) => {
+    const oC = await getDoc(doc(db, "ordenesCompra", id))
+    const ordenCompra = { ...oC.data(), id: oC.id }
+    return ordenCompra
 }

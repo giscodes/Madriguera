@@ -11,7 +11,7 @@ const {darkMode} = useDarkModeContext()
 
   return (
     <div className="navContainer">
-     <nav className={`navbar navbar-expand-lg ${darkMode ? "navbar-dark bg-primary" : "bg-light"}`}>
+     <nav className={`navbar navbar-expand-lg ${darkMode ? "navbar-dark bg-primary" : "bg-dark"}`}>
         <div className="container-fluid">
           <ul className ="nav-brand">
           <li className="nav-item">

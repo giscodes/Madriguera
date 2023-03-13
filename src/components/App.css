@@ -1,71 +1,131 @@
-@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Monoton&family=Text+Me+One&display=swap");
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Monoton&family=Text+Me+One&display=swap");  @import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Monoton&family=Montserrat&family=Text+Me+One&display=swap');
 
+/* Variables */
+:root {
+  --primary-color: #147d8b;
+  --dark-background-color: rgb(22, 21, 21);
+  --light-background-color: rgb(15, 133, 141);
+  --secondary-color:  rgb(1, 18, 20);
+}
+
+/* Estilos */
+body.body-bg {
+  background-image: url("../../public/img/leksatreekru_many_ghost_coming_out_of_the_trees_in_the_forest_f_8942cf7c-8ccc-4055-900d-1f4f8e1103f9.png");
+  background-size: 100%;
+}
 .cardProducto {
   width: 18rem;
-  margin:4px;
-  background-color: #147d8b;
+  margin: 4px;
+  background-color: transparent;
+  box-shadow: 0 10px 30px  var(--light-background-color); 
 }
 
 .cardProductos {
-  margin:4px;
+  margin: 4px;
   align-items: center;
   justify-content: center;
 }
 
+.cardTitle {
+  font-size: 1.5rem; 
+  font-weight: bold;
+  color: var(--light-background-color);
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-size: 1rem; 
+  color: var(--light-background-color);
+}
+
 .cardBody {
-  background-color: white;
+  background-color: var(--light-background-color);
   margin-bottom: 3px;
   text-align: center;
+  border-radius: 1.5%;
 }
-.cardBodyDark{
-  background-color: rgb(22, 21, 21);
+
+.cardBodyDark {
+  background-color: var(--dark-background-color);
   margin-top: 3px;
   text-align: center;
 }
 
-.cartContainer{
+.cartContainer {
   margin-top: 3%;
-  margin-left: 26,5%;
+  margin-left: 26.5%;
 }
 
-.cardCart{
+.cardCart {
   max-width: 640px;
 }
-.divButtons button {
+
+.btn-prod {
   margin: 4px;
+  background-color: var(--secondary-color); 
+  border: none;
+  color: whitesmoke;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-prod:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
 }
 
 img {
   margin-top: 3px;
-  height: 15rem;
+  height: 18rem;
+  width: 15rem;
 }
 
 .itemDetail {
   max-width: 760px;
   margin-top: 20px;
+  background-color: transparent;
+  color: whitesmoke;
 }
 
 .itemDetailBodyDark {
-  background-color: rgb(22, 21, 21);
+  background-color: var(--dark-background-color);
   color: whitesmoke;
 }
-.brand{
+
+.brand {
   font-family: 'Luxurious Roman', cursive;
   font-size: 3rem;
   border-style: none;
-  color: #147d8b;
+  color: var(--primary-color);
+  background-color: transparent;
 }
-.nav-brand{
-  list-style: none;
+
+.navContainer{
+  background-color: var(--primary-color);
 }
-.container-fluid{
+
+.container-fluid {
   display: grid;
   justify-items: baseline;
+  background-image: url("../../public/img/leksatreekru_many_ghost_coming_out_of_the_trees_in_the_forest_f_0bc30c15-dffa-4d5e-8307-dce6dd4a5dbf.png");
+  background-size: cover;
+  background-position: center;
 }
-.contForm{
+
+.contForm {
   margin-top: 20px;
 }
-.darkMode{
+
+.darkMode {
   background-color: black;
   color: gainsboro;
 }
+
+.cartWidget {
+  margin-right: 40px;
+  color: white;
+}
+
