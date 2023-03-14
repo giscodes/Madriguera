@@ -7,30 +7,27 @@ import { createOrdenCompra, updateProducto, getProducto } from "../../utils/fire
 
 
 export const Checkout = () => {
-    const { carrito, emptyCart, totalPrice } = useCarritoContext()
-    let navigate = useNavigate()
-    const datosForm = useRef()
-    const consultarForm = (e) => {
-        e.preventDefault()
-        const data = new FormData(datosForm.current)
-        const cliente = Object.fromEntries(data)
-        const email = cliente.email
-        const verificarEmail = cliente.verificarEmail
+  const { carrito, emptyCart, totalPrice } = useCarritoContext();
+  let navigate = useNavigate();
+  const datosForm = useRef();
 
-        if (email !== verificarEmail) {
-            toast.error('Por favor checkea que las direcciones de Email sean idénticas')
-            return
-        }
+const consultarForm = (e) => {
+    e.preventDefault()
+    const data = new FormData(datosForm.current)
+    const cliente = Object.fromEntries(data)
+    const email = cliente.email
+    const verificarEmail = cliente.verificarEmail
 
-        const aux = [...carrito]
+    const aux = [...carrito]
 
-        aux.forEach(prodCarrito => { //Descontar stock de BDD
-            getProducto(prodCarrito.id).then(prodBDD => {
-                prodBDD.stock -= prodCarrito.cant //Descontar stock 
-                updateProducto(prodBDD.id, prodBDD)
-            })
+    aux.forEach(prodCarrito => { //Descontar stock de BDD
+        getProducto(prodCarrito.id).then(prodBDD => {
+            prodBDD.stock -= prodCarrito.cant //Descontar stock 
+            updateProducto(prodBDD.id, prodBDD)
         })
+    })
 
+    if (email == verificarEmail) {
         createOrdenCompra(cliente, aux, totalPrice(), new Date().toISOString()).then(ordenCompra => {
             toast(`🦄 Travesura realizada!, su orden de compra con el id ${ordenCompra.id} por un total de $ ${new Intl.NumberFormat('de-DE').format(totalPrice())} fue realizada con exito`, {
                 position: "top-right",
@@ -46,9 +43,10 @@ export const Checkout = () => {
             emptyCart()
             navigate("/")
         })
-
-
+    } else {
+        toast.error('Por favor checkea que las direcciones de Email sean idénticas')        
     }
+}
 
     return (
 
@@ -56,7 +54,7 @@ export const Checkout = () => {
             {carrito.length === 0
                 ?
                 <>
-                    <h2>Debes comprar algo para finalizar la compra!</h2>
+                    <h2>Debes tener algo en el carrito para finalizar la compra!</h2>
                     <Link className="nav-link" to={"/"}><button className="btn btn-primary">Continuar comprando</button></Link>
                 </>
                 :
