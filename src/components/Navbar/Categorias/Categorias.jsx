@@ -3,7 +3,7 @@ import React from "react";
 export const Categorias = React.memo( () => {
   return (
       <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">
+        <a className="nav-link dropdown-toggle btn-prod"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">
           Qué encontrarás?
         </a>
         <ul className="dropdown-menu">

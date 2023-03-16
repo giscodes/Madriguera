@@ -27,7 +27,7 @@ const consultarForm = (e) => {
         })
     })
 
-    if (email == verificarEmail) {
+    if (email === verificarEmail) {
         createOrdenCompra(cliente, aux, totalPrice(), new Date().toISOString()).then(ordenCompra => {
             toast(`🦄 Travesura realizada!, su orden de compra con el id ${ordenCompra.id} por un total de $ ${new Intl.NumberFormat('de-DE').format(totalPrice())} fue realizada con exito`, {
                 position: "top-right",
@@ -70,7 +70,7 @@ const consultarForm = (e) => {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="verificarEmail" className="form-label">Verificar Email</label>
-                            <input type="email" className="form-control" name="email" />
+                            <input type="email" className="form-control" name="verificarEmail" />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="dni" className="form-label">Documento</label>

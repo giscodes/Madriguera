@@ -1,32 +1,33 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Contacto = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    message: ""
   });
+  const [enviado, setEnviado] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
-    };
-    fetch('/api/send-email', requestOptions)
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.log(error));
+    console.log(formData); 
+    setFormData({
+      name: "",
+      email: "",
+      message: ""
+    });
+    setEnviado(true);
   };
 
+  
 
   return (
     <div className="container">
@@ -72,10 +73,16 @@ export const Contacto = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-prod" name="submit">
           Enviar
         </button>
       </form>
+      {enviado && (
+        <div className="alert alert-success mt-3">
+         <p>En breve nos pondremos en contacto contigo!</p> 
+          <Link className="nav-link" to={"/"}><button className="btn btn-prod">Volver al inicio</button></Link>
+        </div>
+      )}
     </div>
   );
 };

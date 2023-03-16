@@ -7,6 +7,7 @@
   --dark-background-color: rgb(22, 21, 21);
   --light-background-color: rgb(15, 133, 141);
   --secondary-color:  rgb(1, 18, 20);
+  --font-color: whitesmoke;
 }
 
 /* Estilos */
@@ -40,10 +41,11 @@ body.body-bg {
 }
 
 .cardBody {
-  background-color: var(--light-background-color);
+  background-color: var(--primary-color);
   margin-bottom: 3px;
   text-align: center;
   border-radius: 1.5%;
+  color: var(--font-color)
 }
 
 .cardBodyDark {
@@ -60,12 +62,22 @@ body.body-bg {
 .cardCart {
   max-width: 640px;
 }
+.btn-ex{
+  margin: 4px;
+  background-color: rgb(73, 2, 0); 
+  border: none;
+  color: var(--font-color);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
-.btn-prod {
+.btn-prod{
   margin: 4px;
   background-color: var(--secondary-color); 
   border: none;
-  color: whitesmoke;
+  color: var(--font-color);
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
@@ -86,8 +98,8 @@ img {
 .itemDetail {
   max-width: 760px;
   margin-top: 20px;
-  background-color: transparent;
-  color: whitesmoke;
+  background-color: var(--primary-color);
+  color: var(--font-color);
 }
 
 .itemDetailBodyDark {
@@ -99,7 +111,7 @@ img {
   font-family: 'Luxurious Roman', cursive;
   font-size: 3rem;
   border-style: none;
-  color: var(--primary-color);
+  color: var(--font-color);
   background-color: transparent;
 }
 
@@ -126,6 +138,21 @@ img {
 
 .cartWidget {
   margin-right: 40px;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+}
+.carritoVacio{
+  color: var(--font-color);
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.resumenCompra{
+  color: var(--font-color);
+  font-weight: bold; 
+}
+
+.cantCarrito{
+  color: var(--font-color);
+  box-shadow: 0 10px 30px  rgb(206, 173, 28); 
 }
 

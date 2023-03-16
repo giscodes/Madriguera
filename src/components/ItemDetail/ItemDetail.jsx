@@ -25,7 +25,7 @@ export const ItemDetail = ({ prod }) => {
             Precio: ${new Intl.NumberFormat("de-DE").format(prod.precio)}
           </p>
           <p className="card-text">Stock: {prod.stock}</p>
-          <ItemCount ValInicial={1} stock={prod.stock} onAdd={onAdd} />
+          <ItemCount ValInicial={1} stock={prod.stock} onAdd={onAdd} textBoton="Agregar al carrito"/>
           <Link className="nav-link" to={"/cart"}>
             <button className="btn btn-prod">Finalizar Compra</button>
           </Link>
